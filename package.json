@@ -1,0 +1,19 @@
+{
+  "name": "financial-app-api",
+  "version": "1.0.0",
+  "description": "App para financieras",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guslublin/financial-app-api.git"
+  },
+  "author": "Gustavo Lublin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guslublin/financial-app-api/issues"
+  },
+  "homepage": "https://github.com/guslublin/financial-app-api#readme"
+}
