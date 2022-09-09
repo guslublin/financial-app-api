@@ -8,7 +8,7 @@ const { json } = require('express/lib/response');
 
 router.get('/', (req, res) => res.send('Hello World'));
 
-router.post('/signup', async(req, res) => {
+router.post('/signUp', async(req, res) => {
 
     const { email, password } = req.body;
     const newUser = new User({email, password});
@@ -20,7 +20,7 @@ router.post('/signup', async(req, res) => {
 
 });
 
-router.post('/signin', async (req, res) => {
+router.post('/signIn', async (req, res) => {
     const { email, password } = req.body;
 
     const user = await User.findOne({email});
