@@ -1,9 +1,11 @@
 const { Router } = require('express');
+
 const router = Router();
 
 const User = require('../models/User');
 
 const jwt = require('jsonwebtoken');
+
 const { json } = require('express/lib/response');
 
 router.get('/', (req, res) => res.send('Hello World'));
@@ -36,23 +38,23 @@ router.get('/tasks', (req, res) => {
     res.json([
         {
             _id: 1,
-            nname: 'Task One',
+            name: 'Task One',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         },
         {
             _id: 2,
-            nname: 'Task Two',
+            name: 'Task Two',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         },
         {
             _id: 3,
-            nname: 'Task Three',
+            name: 'Task Three',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         }
-    ])
+    ]);
 });
 
 
@@ -60,23 +62,23 @@ router.get('/private-tasks', verifyToken, (req, res) => {
     res.json([
         {
             _id: 1,
-            nname: 'Task One',
+            name: 'Task One',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         },
         {
             _id: 2,
-            nname: 'Task Two',
+            name: 'Task Two',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         },
         {
             _id: 3,
-            nname: 'Task Three',
+            name: 'Task Three',
             description: 'Lorem ipsum',
             date: '2022-09-06T02:47:00.476Z'
         }
-    ])
+    ]);
 });
 
 router.get('/profile', verifyToken, (req, res)=>{
